@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Side Bar</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <script type="text/javascript" src="jquery.js" ></script>
+  <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+<div id="wrapper">
+<!-- Sidebar-->
+<div id="sidebar-wrapper" >
+<ul class="sidebar-nav">
+<li> <a href="#">Account</a></li>
+<li><a href="#">Settings</a></li>
+<li> <a href="#">Manage</a></li>
+<li><a href="#">Log Out</a></li>
+
+</ul>
+<form class="navbar-form navbar-left" role="search">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search" />
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
+    
+</div>
+<!-- Page Content-->
+<div id="page-content-wrapper">
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-12">
+<button type="button" class="btn btn-default" style="font-size: 20px;" id="menu-toggle"><span class="glyphicon glyphicon-align-justify"></span></button>
+ 
+
+<h1>Sidebar Layout</h1>
+<pre>Time complexity :
+Big O notation
+f(n) = O(g(n)) means
+There are positive constants c and k such that:
+0<= f(n) <= c*g(n) for all n >= k.
+For large problem sizes the dominant term(one with highest value of exponent) almost completely
+determines the value of the complexity expression. So abstract complexity is expressed in terms of
+the dominant term for large N. Multiplicative constants are also ignored.
+N^2 + 3N + 4 is O(N^2) 
+since for N>4, N^2 + 3N + 4 < 2N^2 (c=2  k=4)
+O(1)­ constant time
+This means that the algorithm requires the same fixed number of steps regardless of the size of the
+task. 
+Example: 
+1)a statement involving basic operations 
+Here are some examples of basic operations.
+­one arithmetic operation (eg., +, *) 
+­one assignment
+­one test (eg., x==0)
+­one read(accessing an element from an array)
+2) Sequence of statements involving basic operations.
+statement 1;
+statement 2;
+..........
+statement k;
+Time for each statement is constant and the total time is also constant: O(1)
+<ul class ="pager">
+    <li class="previous"><a href="#">&larr; Previous</a></li>
+    <li class="next"><a href="#">&rarr; Next</a></li>
+</ul>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+    $("#menu-toggle").click(function(e){
+        e.preventDefault();
+        $("#wrapper").toggleClass("menuDisplayed");
+        /* Act on the event */
+    });
+</script>
+</body>
+</html>
